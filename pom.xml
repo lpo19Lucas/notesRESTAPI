@@ -6,7 +6,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>easy-notes</artifactId>
 	<version>1.0.0</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>easy-notes</name>
 	<description>Rest API for a Simple Note Taking Application</description>
@@ -56,6 +56,24 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			 <plugin>
+				<groupId>com.heroku.sdk</groupId>
+				<artifactId>heroku-maven-plugin</artifactId>
+				<version>2.0.6</version>
+			</plugin>
+			<plugin>
+    			<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<attachClasses>true</attachClasses>
+					<webXml>target/web.xml</webXml>
+					<webResources>
+						<resource>
+							<directory>src/main/webapp</directory>
+							<filtering>true</filtering>
+						</resource>
+					</webResources>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
