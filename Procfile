@@ -1,1 +1,1 @@
-web: java -jar target/easy-notes-1.0.0.jar
+web: java -jar -Dserver.port=$PORT target/easy-notes-1.0.0.jar
