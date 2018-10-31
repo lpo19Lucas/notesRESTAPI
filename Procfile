@@ -1,1 +1,1 @@
-web: mvn spring-boot:run
+web: java -jar target/easy-notes-1.0.0.jar
