@@ -20,10 +20,10 @@ public class Note {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank
+    
     private String title;
 
-    @NotBlank
+    
     private String content;
 
     @Column(nullable = false, updatable = false)
